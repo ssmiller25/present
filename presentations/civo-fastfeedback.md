@@ -5,7 +5,7 @@ highlightTheme: "monokai"
 slideNumber: true
 title: "DevOps Bootcamp 2021: Fast Feedback"
 description: "Fast feedback is a key component of many parts of Devops, as discussed in our previous sessions.   This session will dive into hands-on examples of fast feedback configurations and tools that target the build/test, release, and deployment stages of the devops cycle."
-last-updated: "Sep 2, 2021"
+last-updated: "Sep 3, 2021"
 separator: <!--s-->
 verticalSeparator: <!--v-->
 revealOptions:
