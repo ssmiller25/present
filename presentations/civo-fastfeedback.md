@@ -12,7 +12,7 @@ revealOptions:
     transition: 'zoom'
 ---
 
-<!-- .slides: data-background="./civo-fastfeedback/background.png" -->
+<!-- .slide: data-background="./civo-fastfeedback/background.png" -->
 
 ## DevOps Bootcamp 2021: Fast Feedback
 
@@ -32,7 +32,7 @@ GOAL: 45 minutes presentation, with 10-15 minute Q&A
 
 <!--s-->
 
-<!-- .slides: data-background="./civo-fastfeedback/background.png" -->
+<!-- .slide: data-background="./civo-fastfeedback/background.png" -->
 
 ## Fast Feedback
 
