@@ -76,28 +76,31 @@ Notes:
 
 <!-- .slide: data-background="./civo-fastfeedback/background.png" -->
 
-## Fast Feedback: Microservice Example
+## Fast Feedback: Microservice Focus
 
 https://www.github.com/ssmiller25/cloudnativeapp
 
 Notes:
 
+- Microservices aren't required for fast feedback looks, but can be helpful in a lot of cases.
 - Google's Microservice Reference Framework.
-- A Polygot app...written in several languages.  Provides a great platform to see examples in commonly used language in the Microservice space.
+- A Polygot app written in several languages.  Provides a great platform to see examples in commonly used language in the Microservice space.
 
 <!--s-->
 
 <!-- .slide: data-background="./civo-fastfeedback/background.png" -->
 
-## Fast Feedback - Create
+## Fast Feedback - Build and Test
 
 Optimize the local developer experience
+
+![ff-build-heading-pic](./civo-fastfeedback/ff-build-headline.png)
 
 Notes:
 
 - Developers sometimes have to deal with long, manual local build toolchains
 - Make sure the local toolchain is optimized
-- Highlights: Makefiles and skaffold
+- Highlights: Makefiles and skaffoldl
   - Makefile - a method to help consolidate series of commands.  Older, but common in some toolchains already (C/C++, Golang, etc)
   - Skaffold - A method to automate the building of multiple containers
 - Demo: Makefile
@@ -107,9 +110,11 @@ Notes:
 
 <!-- .slide: data-background="./civo-fastfeedback/background.png" -->
 
-## Fast Feedback - Verify/Package
+## Fast Feedback - Release/Deploy
 
 Pull based review environments
+
+![Release/Deploy Headling](./civo-fastfeedback/ff-release-headline.png)
 
 Notes:
 
@@ -129,17 +134,20 @@ Notes:
 
 <!-- .slide: data-background="./civo-fastfeedback/background.png" -->
 
-## Fast Feedback - Release/Configure/Monitor
+## Fast Feedback - Operate/Monitor
+
+![Operate/Monitor Headline](./civo-fastfeedback/ff-operate-headline.png)
 
 Rollback on demand
 
 Notes:
 
-- Fast feedback also represents being able to quickly roll back code changes
+- Monitoring is pretty well covered, and is a larger subject - so we will concentrate on how to pull back once an issue has been found
+  - As Operate/Monitor session describes, when someone is paged, it sould be relatively easy to pull back a release.
 - Gives comfort with high velocity, as any mistakes can be quickly undone
 - An easy first step, although more advance phases are available.
   - Canary deploys
-  - Blue/Gree deploys
+  - Blue/Green deploys
 - Hands-On Example
   - Pull back a PR that's already there
   - (warning, could be up to 10 minutes with testing)
