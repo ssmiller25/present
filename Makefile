@@ -34,6 +34,7 @@ push:
 	docker tag $(DOCKER_REPO)/present:${git_hash} $(DOCKER_REPO)/present:${version}
 	docker tag $(DOCKER_REPO)/present:${git_hash} $(DOCKER_REPO)/present:latest
 	docker push $(DOCKER_REPO)/present:$(git_hash)
+	docker push $(DOCKER_REPO)/present:${version}
 	docker push $(DOCKER_REPO)/present:latest
 
 .PHONY: livedev
