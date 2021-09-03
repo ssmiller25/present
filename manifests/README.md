@@ -2,7 +2,10 @@
 
 ## Usage
 
-TODO: Fill out
+```sh
+# From root of repository
+kustomize build ./ | kubectl apply -f -
+```
 
 ## Creation
 
@@ -10,7 +13,7 @@ TODO: Fill out
 * Build out k8s configs:
 
 ```sh
-kubectl get deployment k8s-intro -o yaml --export > deployment.yaml
-kubectl get service k8s-intro -o yaml --export > service.yaml
-kubectl get ingress k8s-intro-ingress -o yaml --export > k8s-intro-ingress.yaml
+kubectl get deployment present -o yaml --export > deployment.yaml
+kubectl get service present -o yaml --export > service.yaml
+kubectl get ingress present -o yaml --export > k8s-intro-ingress.yaml
 ```

@@ -38,7 +38,7 @@ push:
 
 .PHONY: livedev
 livedev: stop
-	docker run -d --rm --name present -p 1948:1948 -v $(PWD)/presentations:/slides quay.io/ssmiller25/reveal-md:latest 
+	docker run -d --rm --name present -p 1948:1948 -v $(PWD)/presentations:/slides quay.io/ssmiller25/reveal-md:5.0.0
 
 .PHONY: imagedev
 imagedev: stop
