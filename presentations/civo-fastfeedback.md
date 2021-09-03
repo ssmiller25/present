@@ -42,7 +42,7 @@ GOAL: 50-60 minutes presentation, Q&A throughout session
   - Build & Test
   - Release & Deploy
   - Operate & Monitor
-- Pull together for a demo, highlighting fast-feedback
+- Let's demo fast-feedback examples throughout.
 
 Notes:
   - So Far, covered
@@ -69,8 +69,8 @@ Notes:
   - Verify/Package: Fast Feedback from Peers and Business Users
   - Release/Configure/Monitor: Fast Rollback once a change has made it to production
 - Several tools will be highlighted
-  - Help to solitify the ideas presented so far by seeing them in action
-- - Remember there are a wide variety of tooling in each area.  Depending on your circumstances, better tools may exist.
+  - Help to solidify the ideas presented so far by seeing them in action
+  - Remember there are a wide variety of tooling in each area.  Depending on your circumstances, better tools may exist.
 
 <!--s-->
 
@@ -100,7 +100,7 @@ Notes:
 
 - Developers sometimes have to deal with long, manual local build toolchains
 - Make sure the local toolchain is optimized
-- Highlights: Makefiles and skaffoldl
+- Highlights: Makefiles and skaffold
   - Makefile - a method to help consolidate series of commands.  Older, but common in some toolchains already (C/C++, Golang, etc)
   - Skaffold - A method to automate the building of multiple containers
 - Demo: Makefile
