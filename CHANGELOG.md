@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.1] - 2021-03-03
+
+- Civo Fast Feedback with screenshots
+
+## [1.3.0] - 2021-03-02
+
+- Draft of Civo Fast Feedback presentation
+
 ## [1.2.0] - 2021-02-20
 
 - Minor updates for "Dev Tooling for Ops"

@@ -1,6 +1,6 @@
 
 git_hash = $(shell git rev-parse --short -q HEAD)
-version := 1.2.0
+version := 1.3.1
 release_date := $(shell date +%Y-%m-%d)
 reveal_version := 5.0.0
 
@@ -39,7 +39,7 @@ push:
 
 .PHONY: livedev
 livedev: stop
-	docker run -d --rm --name present -p 1948:1948 -v $(PWD)/presentations:/slides quay.io/ssmiller25/reveal-md:latest 
+	docker run -d --rm --name present -p 1948:1948 -v $(PWD)/presentations:/slides quay.io/ssmiller25/reveal-md:5.0.0
 
 .PHONY: imagedev
 imagedev: stop
