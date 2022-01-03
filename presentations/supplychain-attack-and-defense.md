@@ -3,8 +3,8 @@ theme : "league"
 transition: "slide"
 highlightTheme: "monokai"
 slideNumber: true
-title: "Defense Against Supply Chain Attacks"
-description: "Supply chain attacks have made the news, and represent a real threat vector for companies and their customers.  Demonstrait some hands-on supply chain compromises and defense strategies."
+title: "Supply Chain Attacks and Defense"
+description: "Supply chain attacks have made the news, and represent a real threat vector for companies and their customers.  Demonstrate some hands-on supply chain compromises and defense strategies."
 last-updated: "March 28, 2022"
 separator: <!--s-->
 verticalSeparator: <!--v-->
@@ -33,7 +33,7 @@ GOAL: 30 minutes presentation, with 15-30 minute Q&A
 
 ## Goal
 
-Demonstrait supply-chain attacks and defense strategies
+Demonstrate supply-chain attacks and defense strategies
 
 Note:
 
@@ -57,7 +57,7 @@ At least a modern workflow:
 
 <!--s-->
 
-## Weeknesses In The Supply Chain
+## Weaknesses In The Supply Chain
 
 Note:
 
@@ -74,7 +74,7 @@ Note:
 
 Note:
 
-- Workstation - Standardard Security precautions (only known software sources, good password, yada, yada, yada)
+- Workstation - Standard Security precautions (only known software sources, good password, yada, yada, yada)
 - Third party library - ensure
   - They are well known, well used, signed (both library and docker)
 - Repository Security
@@ -84,3 +84,15 @@ Note:
   - Ensure all code has to be reviewed by another developer (or **flag** any emergency commits)
   - Ensure CI and CD check signatures, and potentially require additional approval for third party libraries
 - Security of any process/machine invovled to releasing the final code base
+
+<!--s-->
+
+## Defending The Supply Chain - Continuous Monitoring
+
+Note:
+
+- How to we defend again older libraries (log4j...)
+  - Dependabot like auto updates
+  - Ideally PRs automatically created and assigned for integration.
+  - Potential notification based on severity of updated code...
+
