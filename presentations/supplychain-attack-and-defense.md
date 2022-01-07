@@ -96,3 +96,11 @@ Note:
   - Ideally PRs automatically created and assigned for integration.
   - Potential notification based on severity of updated code...
 
+<!--v-->
+
+## Defending The Supply Chain - Dependabot Alternatives
+
+- Synk
+- Whitesource Renovate
+- SonarQube and Qualys
+
