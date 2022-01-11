@@ -3,16 +3,16 @@ theme : "league"
 transition: "slide"
 highlightTheme: "monokai"
 slideNumber: true
-title: "Supply Chain Attacks and Defense"
-description: "Supply chain attacks have made the news, and represent a real threat vector for companies and their customers.  Demonstrate some hands-on supply chain compromises and defense strategies."
-last-updated: "March 28, 2022"
+title: "Defense Against The Dark Arts...of Supply Chain Attacks"
+description: "Many software supply chain attacks and library compromises have made the news, and represent a real threat vector for companies and their customers. We will show some hands-on supply chain and library compromises and defense strategies against such attacks."
+last-updated: "Feb 28, 2022"
 separator: <!--s-->
 verticalSeparator: <!--v-->
 revealOptions:
     transition: 'zoom'
 ---
 
-## Defense Against Supply Chain Attacks
+## Defense Against The Dark Arts...of Supply Chain Attacks
 
  [Steve Miller](https://www.r15cookie.com) 
 
@@ -95,6 +95,7 @@ Note:
   - Dependabot like auto updates
   - Ideally PRs automatically created and assigned for integration.
   - Potential notification based on severity of updated code...
+- How to defend against library modification <https://fossbytes.com/developer-corrupts-faker-js-and-color-js/>
 
 <!--v-->
 
