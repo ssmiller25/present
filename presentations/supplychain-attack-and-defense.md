@@ -1,5 +1,6 @@
 ---
-theme : "league"
+#theme : "paper-theme"
+theme : "/css/paper-theme.css"
 transition: "slide"
 highlightTheme: "monokai"
 slideNumber: true
