@@ -39,6 +39,22 @@ Demonstrate supply-chain attacks and defense strategies
 Note:
 
 
+<!--v-->
+
+## Strategy
+
+- Toolbox Mentality
+- Focus on Fundamentals
+
+  > “The minute you get away from fundamentals ... the bottom can fall out of your game, your schoolwork, your job, whatever you’re doing.” - Michael Jordon*
+
+Note:
+
+- Focus on small, individual techniques and tools that can be implemented as needed, based on your specific environment
+- FOcus on fundamentals - a lot of what will protect you best are common coding best practices
+
+* Michael Jordon quote source: <https://www.goodreads.com/quotes/107363-the-minute-you-get-away-from-fundamentals-whether-its>
+
 <!--s-->
 
 ## Standard Development Supply Chain
@@ -86,6 +102,13 @@ Note:
   - Ensure CI and CD check signatures, and potentially require additional approval for third party libraries
 - Security of any process/machine invovled to releasing the final code base
 
+<!--v-->
+
+## Defending the Supply Chain - Example Applications
+
+- React/Node - <https://github.com/ssmiller25/brokencrystals>
+- PHP - <https://github.com/ssmiller25/diwa>
+
 <!--s-->
 
 ## Defending The Supply Chain - Continuous Monitoring
@@ -106,3 +129,8 @@ Note:
 - Whitesource Renovate
 - SonarQube and Qualys
 
+<!--s-->
+
+## Additional Resources
+
+- OWASP Vulerable Web Application Directory Project: <https://github.com/OWASP/OWASP-VWAD>
