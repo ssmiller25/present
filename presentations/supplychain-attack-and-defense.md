@@ -34,9 +34,24 @@ GOAL: 30 minutes presentation, with 15-30 minute Q&A
 
 ## Goal
 
-Demonstrate supply-chain attacks and defense strategies
+Demonstrate supply-chain attacks and defense strategies.
+
+### Examples:
+
+- Dependent Library Security
+  - Log4J
+- Supply Chain Compromise
+  - SolarWinds Breach
+- Upstream Library Changes
+  - left-pad
+  - Faker.js and Color.js
 
 Note:
+  - Increasing we are seeing security attacks that target more then just production deployments
+
+- Further Reading
+  - <https://www.sans.org/blog/what-you-need-to-know-about-the-solarwinds-supply-chain-attack/>
+  - <https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/>
 
 
 <!--v-->
@@ -51,15 +66,22 @@ Note:
 Note:
 
 - Focus on small, individual techniques and tools that can be implemented as needed, based on your specific environment
-- FOcus on fundamentals - a lot of what will protect you best are common coding best practices
+- Focus on fundamentals - a lot of what will protect you best are common coding best practices
 
-* Michael Jordon quote source: <https://www.goodreads.com/quotes/107363-the-minute-you-get-away-from-fundamentals-whether-its>
+- Michael Jordon quote source: <https://www.goodreads.com/quotes/107363-the-minute-you-get-away-from-fundamentals-whether-its>
 
 <!--s-->
 
 ## Standard Development Supply Chain
 
 Note:
+
+Supply Chain (Simplified Devops Loop)
+
+             Libs                        Runners
+              |                             |
+              v                             v
+Developer -> Code -> Peer Review -> CI/Tests Deployments -> Production Deployment
 
 At least a modern workflow:
 - Develop writes and tests code/website on local machine, tests it.
@@ -72,35 +94,90 @@ At least a modern workflow:
 - Deployment process 
   - Some manual or autmoated method
 
-<!--s-->
+<!--v-->
 
-## Weaknesses In The Supply Chain
+## Standard Development Supply Chain
+
+All parts of the software development cycle could be targetted!
 
 Note:
 
-- Primarily, any manual work
-  - Developer workstation itself (credentials to repository, compromise of the local machine)
-  - Third party libraries and containers
-    - Largest one - and difficult to secure along with allowing maximum flexibility.
-  - Process to merge into the main codebase
-  - Deployment process itself
+Tradition security practices concentrate ont he "Production" deployment/environment
+Not uncommon for development shops to consider dev machines/environment not as important to secure as production
+As we seen from history, this is a grave mistake
 
 <!--s-->
 
 ## Defending The Supply Chain
 
+Fundamental: Host Security!
+
+- Workstations
+- CI/Test Environment
+- CI/CD Runners 
+- Servers
+
 Note:
 
 - Workstation - Standard Security precautions (only known software sources, good password, yada, yada, yada)
-- Third party library - ensure
+- CI/CD environment.  Remember, this is how Solarwinds was compromised
+  - Injected malious code, that **was signed** and **released**
+  - However, CI environments provide a lot of benefits, so I still view as essential to a good software supply chain
+- With Test and Runners, if using docker, ensure following Docker best practices (whole slide later in development)
+  - Security of any process/machine invovled to releasing the final code base
+- Server
+  - Zero Trust Principles, espcially with modern work from home enviornments
+
+<!--v-->
+
+## Defending The Supply Chain
+
+- Source Control
+  - Protected Branches
+  - Peer Review Requirements
+
+Note:
+
+- Best way to prevent malicious or unintentional security risks in your code
+- Peer reveiw requirements/protected branches - should be required.  **No single person should be able to commit code to production
+  - Ensure all code has to be reviewed by another developer (or **flag** any emergency commits)
+- Security sensitive code may be flagged for additional reviews
+
+<!--v-->
+
+## Defending The Supply Chain - Library
+
+Library Defenses
+
+- Automated Scanning
+- Version Pinning
+- Artifact Caching
+
+Note:
+
+- Target both malicious and inadvertent security concerns
+- Third party library - ensure scanning
   - They are well known, well used, signed (both library and docker)
+- Version Pinning
 - Repository Security
   - Good practices on employee access to repositories
-  - Zero Trust style to guard against unauthorized users
-  - **Prevent direct commit to main/master or whatever your release branch(es) are** 
-  - Ensure all code has to be reviewed by another developer (or **flag** any emergency commits)
   - Ensure CI and CD check signatures, and potentially require additional approval for third party libraries
-- Security of any process/machine invovled to releasing the final code base
+
+
+<!--v-->
+
+## Defending The Supply Chain - Docker
+
+Docker Defenses
+
+Note:
+
+- Similar to library defences.  Some differences
+  - Dockerfile updates also share OS level concerns (potentially)
+  - Pin dockerfile to SHA256 hash
+  - BUT - need method to ensure you are on latest
+  - Updates within Dockerfile..
+  - Ensure dockerfile scan, but in CI as well as deployed artifact
 
 <!--v-->
 
