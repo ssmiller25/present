@@ -15,7 +15,7 @@ revealOptions:
 
 ## Defense Against The Dark Arts...of Supply Chain Attacks
 
- [Steve Miller](https://www.r15cookie.com) 
+ [Steve Miller](https://www.r15cookie.com)
 
 - Devops Practioner
 - Sr. DevOps Engineer at Tuition.io
@@ -34,25 +34,22 @@ GOAL: 30 minutes presentation, with 15-30 minute Q&A
 
 ## Goal
 
-Demonstrate supply-chain attacks and defense strategies.
+Demonstrate (software) supply-chain attacks and defense strategies.
 
-### Examples:
-
-- Dependent Library Security
-  - Log4J
-- Supply Chain Compromise
-  - SolarWinds Breach
-- Upstream Library Changes
-  - left-pad
-  - Faker.js and Color.js
+- Upstream Library Security: Log4j
+- Upstream Library Changes/Removal: left-pad, Faker.js and Color.js
+- Supply Chain Compromise: SolarWinds Breach
 
 Note:
-  - Increasing we are seeing security attacks that target more then just production deployments
+
+- Certainly a bit more buzz based on news of recent - and not so recent - events
+- Increasing we are seeing security attacks that target more then just production deployments
 
 - Further Reading
+  - <https://www.sans.org/blog/what-do-you-need-to-know-about-the-log4j-log4shell-vulnerability/>
   - <https://www.sans.org/blog/what-you-need-to-know-about-the-solarwinds-supply-chain-attack/>
   - <https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/>
-
+  - <https://www.infoworld.com/article/3047177/how-one-yanked-javascript-package-wreaked-havoc.html>
 
 <!--v-->
 
@@ -83,54 +80,48 @@ Supply Chain (Simplified Devops Loop)
               v                             v
 Developer -> Code -> Peer Review -> CI/Tests Deployments -> Production Deployment
 
-At least a modern workflow:
+Modern supply chains can provide a lot of built in benefits:
+
 - Develop writes and tests code/website on local machine, tests it.
   - May add third party libraries to be more productive
   - May build with third party docker containers
 - Pushing code to a central repository
   - CI runs (or not...)
   - Peer reviewed (but let's say not required...)
-  - Merged in to main codebse
+  - Merged in to main codebase
 - Deployment process 
-  - Some manual or autmoated method
-
-<!--v-->
-
-## Standard Development Supply Chain
-
-All parts of the software development cycle could be targetted!
-
-Note:
+  - Some manual or automated method
 
 Tradition security practices concentrate ont he "Production" deployment/environment
 Not uncommon for development shops to consider dev machines/environment not as important to secure as production
-As we seen from history, this is a grave mistake
+As we seen from history, this is a grave mistake.
 
 <!--s-->
 
-## Defending The Supply Chain
+## Defending The Supply Chain - Hosts
 
 Fundamental: Host Security!
 
 - Workstations
 - CI/Test Environment
-- CI/CD Runners 
+- CI/CD Runners
 - Servers
 
 Note:
 
 - Workstation - Standard Security precautions (only known software sources, good password, yada, yada, yada)
+  - Must be balances with the needs of the developers, as often super-user priledges are necessary<!-- .slide: data-fullscreen -->
 - CI/CD environment.  Remember, this is how Solarwinds was compromised
   - Injected malious code, that **was signed** and **released**
   - However, CI environments provide a lot of benefits, so I still view as essential to a good software supply chain
 - With Test and Runners, if using docker, ensure following Docker best practices (whole slide later in development)
   - Security of any process/machine invovled to releasing the final code base
 - Server
-  - Zero Trust Principles, espcially with modern work from home enviornments
+  - Zero Trust Principles, especially with modern work from home environments
 
 <!--v-->
 
-## Defending The Supply Chain
+## Defending The Supply Chain - Developer
 
 - Source Control
   - Protected Branches
@@ -139,7 +130,7 @@ Note:
 Note:
 
 - Best way to prevent malicious or unintentional security risks in your code
-- Peer reveiw requirements/protected branches - should be required.  **No single person should be able to commit code to production
+- Peer review requirements/protected branches - should be required.  **No single person should be able to commit code to production
   - Ensure all code has to be reviewed by another developer (or **flag** any emergency commits)
 - Security sensitive code may be flagged for additional reviews
 
@@ -149,9 +140,9 @@ Note:
 
 Library Defenses
 
-- Automated Scanning
-- Version Pinning
-- Artifact Caching
+- **Automated Scanning** for insecure versions
+- **Version Pinning** to prevent breaking updates (**MUST** be combined with automated scanning)
+- **Artifact Vendoring** to prevent removal from public repositories.
 
 Note:
 
@@ -163,12 +154,15 @@ Note:
   - Good practices on employee access to repositories
   - Ensure CI and CD check signatures, and potentially require additional approval for third party libraries
 
-
 <!--v-->
 
 ## Defending The Supply Chain - Docker
 
-Docker Defenses
+Docker Defenses (similar to library)
+
+- **Automated Scanning**
+- **Version Pinning** - SHA256 Hash of Upstream
+- **Artifact Vendoring** - Cache remote base images and any dependent artifacts needed for build
 
 Note:
 
@@ -181,13 +175,6 @@ Note:
 
 <!--v-->
 
-## Defending the Supply Chain - Example Applications
-
-- React/Node - <https://github.com/ssmiller25/brokencrystals>
-- PHP - <https://github.com/ssmiller25/diwa>
-
-<!--s-->
-
 ## Defending The Supply Chain - Continuous Monitoring
 
 Note:
@@ -197,6 +184,22 @@ Note:
   - Ideally PRs automatically created and assigned for integration.
   - Potential notification based on severity of updated code...
 - How to defend against library modification <https://fossbytes.com/developer-corrupts-faker-js-and-color-js/>
+
+<!--s-->
+
+## Defending the Supply Chain - Conclusion
+
+## Thanks you!
+
+me@r15cookie.com
+https://www.r15cookie.com
+
+Example Repos
+- React/Node - <https://github.com/ssmiller25/brokencrystals>
+- PHP - <https://github.com/ssmiller25/diwa>
+
+<!--s-->
+
 
 <!--v-->
 
