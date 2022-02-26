@@ -71,7 +71,7 @@ Note:
 
 ## Standard Development Supply Chain
 
-[!SupplyChain](supplychain-overall.png)
+![SupplyChain](supplychain-overall.png)
 
 Note:
 
