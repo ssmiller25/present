@@ -71,6 +71,8 @@ Note:
 
 ## Standard Development Supply Chain
 
+[!SupplyChain](supplychain-overall.png)
+
 Note:
 
 Supply Chain (Simplified Devops Loop)
