@@ -102,26 +102,34 @@ As we seen from history, this is a grave mistake.
 
 ## Defending The Supply Chain - Hosts
 
-Fundamental: Host Security!
+Fundamental: Host Security
 
 - Workstations
-- CI/Test Environment
-- CI/CD Runners
-- Servers
+  - https://www.kolide.com/ 
+  - Best Practices - Not pushing directly to test/production
+- Traditionally Managed Servers/Systems
+  - Production
+  - Dev/Test
+  - Manually Deployed Runners
+
+  > "...as a result of a compromise of the Orion software build system and was not present in the source code repository..." - Solarwinds Supply Chain Attack
 
 Note:
 
-- Workstation - Standard Security precautions (only known software sources, good password, yada, yada, yada)
-  - Must be balances with the needs of the developers, as often super-user priledges are necessary<!-- .slide: data-fullscreen -->
-- CI/CD environment.  Remember, this is how Solarwinds was compromised
-  - Injected malious code, that **was signed** and **released**
-  - However, CI environments provide a lot of benefits, so I still view as essential to a good software supply chain
-- With Test and Runners, if using docker, ensure following Docker best practices (whole slide later in development)
-  - Security of any process/machine invovled to releasing the final code base
+- Workstation 
+  - Avoid HEAVY handed software solutions
+  - Light weight endpoint protection such as Kolide to help with best practices
+  - Defense in depth should prevent developer compromise from infecting additional systems.  (i.e., a developer should **NOT** directly push code to production without a few )
 - Server
+  - Again, avoid HEAVY software approaches, but encourage best practices
   - Zero Trust Principles, especially with modern work from home environments
+  - Main vector of Solarwinds attack.  Bur realize this method is easily adaptable to ANY automated build pipeline, even if your target is not stand-alone Windows executables
 
-<!--v-->
+Quote Source: <https://www.sans.org/blog/what-you-need-to-know-about-the-solarwinds-supply-chain-attack/>
+
+Detailed Analysis of the Solarwinds Compromise: <https://www.crowdstrike.com/blog/sunspot-malware-technical-analysis/>
+
+<!--s-->
 
 ## Defending The Supply Chain - Developer
 
@@ -135,8 +143,9 @@ Note:
 - Peer review requirements/protected branches - should be required.  **No single person should be able to commit code to production
   - Ensure all code has to be reviewed by another developer (or **flag** any emergency commits)
 - Security sensitive code may be flagged for additional reviews
+  - Example Github Actions Example: <https://github.com/Automattic/action-required-review>
 
-<!--v-->
+<!--s-->
 
 ## Defending The Supply Chain - Library
 
@@ -144,7 +153,7 @@ Library Defenses
 
 - **Automated Scanning** for insecure versions
 - **Version Pinning** to prevent breaking updates (**MUST** be combined with automated scanning)
-- **Artifact Vendoring** to prevent removal from public repositories.
+- **Artifact Vendoring** to prevent removal from public repositories effecting builds.
 
 Note:
 
@@ -152,11 +161,23 @@ Note:
 - Third party library - ensure scanning
   - They are well known, well used, signed (both library and docker)
 - Version Pinning
-- Repository Security
-  - Good practices on employee access to repositories
-  - Ensure CI and CD check signatures, and potentially require additional approval for third party libraries
+  - Heavily depending on language, but versioning your package lock file, such as:
+    - packages-lock.json for Javascript
+    - Gemfile.lock for Ruby
+    - composer.lock for PHP projects (that use composer...which they should)
+- Artifact Vendoring (Advance)
+  - CAREFUL...should not blindly version-control your dependent modules directories!  
+  - Simple: Leverage Caching to prevent momentary library outages: https://github.com/actions/cache
 
 <!--v-->
+
+## Defending The Supply Chain - Dependabot Alternatives
+
+- Synk
+- Whitesource Renovate
+- SonarQube and Qualys
+
+<!--s-->
 
 ## Defending The Supply Chain - Docker
 
@@ -168,6 +189,9 @@ Docker Defenses (similar to library)
 
 Note:
 
+- Repository Security
+  - Good practices on employee access to repositories
+  - Ensure CI and CD check signatures, and potentially require additional approval for third party libraries
 - Similar to library defences.  Some differences
   - Dockerfile updates also share OS level concerns (potentially)
   - Pin dockerfile to SHA256 hash
@@ -191,6 +215,11 @@ Note:
 
 ## Defending the Supply Chain - Conclusion
 
+- Take small steps at a time
+- Assemble your own toolkits
+- Constant innovation
+
+<!--s-->
 ## Thanks you!
 
 me@r15cookie.com
@@ -199,17 +228,6 @@ https://www.r15cookie.com
 Example Repos
 - React/Node - <https://github.com/ssmiller25/brokencrystals>
 - PHP - <https://github.com/ssmiller25/diwa>
-
-<!--s-->
-
-
-<!--v-->
-
-## Defending The Supply Chain - Dependabot Alternatives
-
-- Synk
-- Whitesource Renovate
-- SonarQube and Qualys
 
 <!--s-->
 
