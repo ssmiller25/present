@@ -36,9 +36,9 @@ GOAL: 30 minutes presentation, with 15-30 minute Q&A
 
 Demonstrate (software) supply-chain attacks and defense strategies.
 
-- Upstream Library Security: Log4j
-- Upstream Library Changes/Removal: left-pad, Faker.js and Color.js
-- Supply Chain Compromise: SolarWinds Breach
+- **Log4j**: Library Security
+- **left-pad, Faker.js and Color.js**: Library Changes/Removal
+- **Solarwinds:** Supply Chain Compromise 
 
 Note:
 
@@ -102,15 +102,10 @@ As we seen from history, this is a grave mistake.
 
 ## Defending The Supply Chain - Hosts
 
-Fundamental: Host Security
-
 - Workstations
   - https://www.kolide.com/ 
-  - Best Practices - Not pushing directly to test/production
 - Traditionally Managed Servers/Systems
-  - Production
-  - Dev/Test
-  - Manually Deployed Runners
+  - Production, Test, and CI/CD Systems!
 
   > "...as a result of a compromise of the Orion software build system and was not present in the source code repository..." - Solarwinds Supply Chain Attack
 
@@ -119,6 +114,7 @@ Note:
 - Workstation 
   - Avoid HEAVY handed software solutions
   - Light weight endpoint protection such as Kolide to help with best practices
+  - Best Practices - Not pushing directly to test/production
   - Defense in depth should prevent developer compromise from infecting additional systems.  (i.e., a developer should **NOT** directly push code to production without a few )
 - Server
   - Again, avoid HEAVY software approaches, but encourage best practices
@@ -222,10 +218,10 @@ Note:
 <!--s-->
 ## Thanks you!
 
-me@r15cookie.com
-https://www.r15cookie.com
+- me@r15cookie.com
+- https://www.r15cookie.com
 
-Example Repos
+### Example Repos
 - React/Node - <https://github.com/ssmiller25/brokencrystals>
 - PHP - <https://github.com/ssmiller25/diwa>
 
