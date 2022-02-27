@@ -221,9 +221,10 @@ Note:
 - me@r15cookie.com
 - https://www.r15cookie.com
 
-### Example Repos
-- React/Node - <https://github.com/ssmiller25/brokencrystals>
-- PHP - <https://github.com/ssmiller25/diwa>
+### Repos
+
+- <https://github.com/ssmiller25/brokencrystals> (React/Node)
+- <https://github.com/ssmiller25/diwa> (PHP)
 
 <!--s-->
 
