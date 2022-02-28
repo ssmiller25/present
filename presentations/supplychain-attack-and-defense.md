@@ -98,6 +98,8 @@ Tradition security practices concentrate ont he "Production" deployment/environm
 Not uncommon for development shops to consider dev machines/environment not as important to secure as production
 As we seen from history, this is a grave mistake.
 
+-  The supply provides a lot of benefits as well.
+
 <!--s-->
 
 ## Defending The Supply Chain - Hosts
@@ -105,7 +107,8 @@ As we seen from history, this is a grave mistake.
 - Workstations
   - https://www.kolide.com/ 
 - Traditionally Managed Servers/Systems
-  - Production, Test, and CI/CD Systems!
+  - Production, Test, and CI/CD Systems
+  - https://www.ossec.net
 
   > "...as a result of a compromise of the Orion software build system and was not present in the source code repository..." - Solarwinds Supply Chain Attack
 
@@ -118,6 +121,7 @@ Note:
   - Defense in depth should prevent developer compromise from infecting additional systems.  (i.e., a developer should **NOT** directly push code to production without a few )
 - Server
   - Again, avoid HEAVY software approaches, but encourage best practices
+  - Traditional OS HIDS, File Integrity, and Rootkit detection code
   - Zero Trust Principles, especially with modern work from home environments
   - Main vector of Solarwinds attack.  Bur realize this method is easily adaptable to ANY automated build pipeline, even if your target is not stand-alone Windows executables
 
@@ -129,17 +133,22 @@ Detailed Analysis of the Solarwinds Compromise: <https://www.crowdstrike.com/blo
 
 ## Defending The Supply Chain - Developer
 
-- Source Control
-  - Protected Branches
-  - Peer Review Requirements
+- Source Control's Branch Protection Rules
+  - Prevent Forced Puses (event by adminstrators)
+  - Require Pull Requests Review Before Merging
 
 Note:
 
+- Links
+  - Protected Branched: <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#about-branch-protection-settings>
+  - Sophisticaed : <https://github.com/Automattic/action-required-review>
+
+- Depending on exact source control system - but all should have this or equivilant features
 - Best way to prevent malicious or unintentional security risks in your code
 - Peer review requirements/protected branches - should be required.  **No single person should be able to commit code to production
   - Ensure all code has to be reviewed by another developer (or **flag** any emergency commits)
 - Security sensitive code may be flagged for additional reviews
-  - Example Github Actions Example: <https://github.com/Automattic/action-required-review>
+
 
 <!--s-->
 
