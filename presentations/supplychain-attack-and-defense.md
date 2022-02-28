@@ -134,7 +134,7 @@ Detailed Analysis of the Solarwinds Compromise: <https://www.crowdstrike.com/blo
 ## Defending The Supply Chain - Developer
 
 - Source Control's Branch Protection Rules
-  - Prevent Forced Puses (event by adminstrators)
+  - Prevent Forced Push to Branches (even by Adminstrators)
   - Require Pull Requests Review Before Merging
 
 Note:
@@ -156,11 +156,13 @@ Note:
 
 Library Defenses
 
-- **Automated Scanning** for insecure versions
+- **Automated Scanning**
   - Remediate Log4J type vulnerabilities
-- **Version Pinning** to prevent breaking updates (**MUST** be combined with automated scanning)
+- **Version Pinning** 
+  - Must be **combined** with automated scanning
   - Mitigate color.js upstream library changes
-- **Artifact Caching or Artifact Vendoring** to prevent removal from public repositories effecting builds.
+- **Artifact Caching or Artifact Vendoring** 
+  - Care for Vendoring
   - Mitigate left-pad and Faker.js upstream library removal
 
 Note:
@@ -196,9 +198,12 @@ Links:
 
 Docker Defenses (similar to library)
 
-- **Automated Scanning** - Docker repository, locally with Synk
-- **Version Pinning** - SHA256 Hash of Upstream
-- **Artifact Vendoring** - Cache remote base images and any dependent artifacts needed for build
+- **Automated Scanning**
+  - Docker repository, locally with Synk
+- **Version Pinning** 
+  - SHA256 Hash of Upstream
+- **Artifact Vendoring** 
+  - Cache remote base images and any dependent artifacts needed for build
 
 Note:
 
@@ -238,16 +243,17 @@ Note:
 <!--s-->
 ## Thanks you!
 
-- me@r15cookie.com
-- <https://www.r15cookie.com>
 
-### Repos
-
-- <https://github.com/ssmiller25/brokencrystals> (React/Node)
-- <https://github.com/ssmiller25/diwa> (PHP)
+- **Contact**
+  - <https://present.r15cookie.com>
+  - <https://www.r15cookie.com>
+  - me@r15cookie.com
+- **Repos**
+  - <https://github.com/ssmiller25/brokencrystals> (React/Node)
+  - <https://github.com/ssmiller25/diwa> (PHP)
 
 <!--s-->
 
 ## Additional Resources
 
-- OWASP Vulerable Web Application Directory Project: <https://github.com/OWASP/OWASP-VWAD>
+- OWASP Vulnerable Web Application Directory Project: <https://github.com/OWASP/OWASP-VWAD>
