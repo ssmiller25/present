@@ -157,10 +157,18 @@ Note:
 Library Defenses
 
 - **Automated Scanning** for insecure versions
+  - Remediate Log4J type vulnerabilities
 - **Version Pinning** to prevent breaking updates (**MUST** be combined with automated scanning)
-- **Artifact Vendoring** to prevent removal from public repositories effecting builds.
+  - Mitigate color.js upstream library changes
+- **Artifact Caching or Artifact Vendoring** to prevent removal from public repositories effecting builds.
+  - Mitigate left-pad and Faker.js upstream library removal
 
 Note:
+
+Links: 
+  - https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/automating-dependabot-with-github-actions?learn=dependency_version_updates&learnProduct=code-security
+  - https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#supported-package-ecosystems
+
 
 - Target both malicious and inadvertent security concerns
 - Third party library - ensure scanning
@@ -188,7 +196,7 @@ Note:
 
 Docker Defenses (similar to library)
 
-- **Automated Scanning**
+- **Automated Scanning** - Docker repository, locally with Synk
 - **Version Pinning** - SHA256 Hash of Upstream
 - **Artifact Vendoring** - Cache remote base images and any dependent artifacts needed for build
 
@@ -204,17 +212,20 @@ Note:
   - Updates within Dockerfile..
   - Ensure dockerfile scan, but in CI as well as deployed artifact
 
-<!--v-->
+<!--s-->
 
 ## Defending The Supply Chain - Continuous Monitoring
 
+Exercise your pipelines!
+
 Note:
 
+- Tech Debt related issues
 - How to we defend again older libraries (log4j...)
   - Dependabot like auto updates
   - Ideally PRs automatically created and assigned for integration.
   - Potential notification based on severity of updated code...
-- How to defend against library modification <https://fossbytes.com/developer-corrupts-faker-js-and-color-js/>
+- How to defend against library modification <https://fossbytes.com/developer-corrupts-faker-js-and-color-js/> 
 
 <!--s-->
 
@@ -228,7 +239,7 @@ Note:
 ## Thanks you!
 
 - me@r15cookie.com
-- https://www.r15cookie.com
+- <https://www.r15cookie.com>
 
 ### Repos
 
