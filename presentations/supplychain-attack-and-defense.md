@@ -198,6 +198,7 @@ Links:
 
 Docker Defenses (similar to library)
 
+- **Base Containers Safety**
 - **Automated Scanning**
   - Docker repository, locally with Synk
 - **Version Pinning** 
@@ -207,6 +208,9 @@ Docker Defenses (similar to library)
 
 Note:
 
+- Example
+
+- Base Container Safety: Make sure to understand your Base containers
 - Repository Security
   - Good practices on employee access to repositories
   - Ensure CI and CD check signatures, and potentially require additional approval for third party libraries
