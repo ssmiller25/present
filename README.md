@@ -2,6 +2,8 @@
 
 Presentations created by [Steve Miller](https://www.r15cookie.com/about/)  All done with [reveal.js](https://revealjs.com/) with markdown source material.
 
+<a href="https://gitpod.io/from-referrer/"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod" alt="Gitpod ready-to-code" />
+
 ## Usage
 
 - Main site <https://present.r15cookie.com>
