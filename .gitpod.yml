@@ -1,2 +1,4 @@
-#tasks:
-#  - init: make
+vscode:
+  extensions:
+    - vscode.markdown
+    - davidanson.vscode-markdownlint
