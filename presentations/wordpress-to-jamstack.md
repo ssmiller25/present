@@ -43,3 +43,4 @@ Note:
 ## Additional Resources
 
 - [The Jamstack Ecosystem vs. WordPress: Why and When to Switch](https://prismic.io/blog/jamstack-vs-wordpress)
+- [Headless Wordpress](https://snipcart.com/blog/headless-wordpress)
