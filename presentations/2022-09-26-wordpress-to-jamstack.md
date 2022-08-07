@@ -123,6 +123,7 @@ Note:
 - Headless CMS
   - Content lives in database, rendered dynamically based on API.
   - Allows for more full-features workflows, etc.
+- Git Based Headless CMS: <https://forestry.io/>
 
 <!--s-->
 
