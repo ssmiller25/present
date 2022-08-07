@@ -112,7 +112,19 @@ Note:
   - Wordpress as Headless CMSes
   - Others such as Payload and Craft (see last two month's presentation for a deep conversation)
 
+<!--v-->
 
+## Content - Where does it live
+
+- Purely in Git
+  - Can use pure development-like review processes
+  - Kind of assumes website/HTML generated content
+    - Although most SSG can generate JSON output as well, and that could potentially be consumed by apps for a more raw "content" approach
+- Headless CMS
+  - Content lives in database, rendered dynamically based on API.
+  - Allows for more full-features workflows, etc.
+
+<!--s-->
 
 ## Additional Resources
 
