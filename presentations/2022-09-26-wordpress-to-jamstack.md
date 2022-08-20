@@ -1,5 +1,4 @@
 ---
-#theme : "paper-theme"
 theme : "/css/paper-theme.css"
 transition: "slide"
 highlightTheme: "monokai"
@@ -32,7 +31,7 @@ GOAL: 30 minutes presentation, with 15-30 minute Q&A
 
 ## Goal
 
-Discuss Jamstack, and moving from Wordpress to Jamstack technologies
+Discuss the Jamstack, and moving from Wordpress to a Jamstack site.
 
 
 Note:
@@ -62,8 +61,8 @@ Note:
 Note:
 
 - Common platform with lots of plugings: but
-  - Security of platform itself.  Perhaps mention downsides of older platform, less then ideal seperation of view, controller, and model code 
-  - Plugins are common code exploits.  Link to recent, hihg profile plugin exploits...and plugins have **FULL** access to entire enviornment including
+  - Security of platform itself.  Perhaps mention downsides of older platform, less then ideal separation of view, controller, and model code 
+  - Plugins are common code exploits.  Link to recent, hihg profile plugin exploits...and plugins have **FULL** access to entire environment including
 - Performance
   - Without optimization, Database quer(ies) on each page hit.
     - Can optimize with Memcached for database queries, and possible front the entire site with a CDN
@@ -86,7 +85,7 @@ A modern approach to static websites:
 Note:
 - By wrapping static sites with modern frameworks, we can mitigate a LOT of the issues we see with standalong wordpress installs
 - Security: Reduce exposure by JUST having the API exposed.  The rest of the site...just a static site!
-  - Still have to be cautious of XSS, XSRF - but reduced surface area for verifing content, etc.
+  - Still have to be cautious of XSS, XSRF - but reduced surface area for verifying content, etc.
 - Performance: Static sites!
   - Rendering is super-performance.  
   - Javascript...have to be cautious to not put too much processing on the front-end.
@@ -120,10 +119,20 @@ Note:
   - Can use pure development-like review processes
   - Kind of assumes website/HTML generated content
     - Although most SSG can generate JSON output as well, and that could potentially be consumed by apps for a more raw "content" approach
+- Git Based Headless CMS: 
+  - [Netlify CMS](https://www.netlifycms.org/)
+  - [Forestry](https://forestry.io/)
 - Headless CMS
-  - Content lives in database, rendered dynamically based on API.
+  - [Payload CMS](https://payloadcms.com/) - July's GRWebDev Presentation
+  - [Craft CMS](https://craftcms.com/) - August's GRWebDev Presentation
+  - [Ghost CMS](https://ghost.org/)
+
+Note:
+
+- Headless CMS
+  - Content lives in Database, rendered dynamically with API calls from Front-end
   - Allows for more full-features workflows, etc.
-- Git Based Headless CMS: <https://forestry.io/>
+
 
 <!--s-->
 
