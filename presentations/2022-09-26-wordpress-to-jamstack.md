@@ -26,6 +26,12 @@ GOAL: 30 minutes presentation, with 15-30 minute Q&A
   - Sr. DevOps Engineer at Tuition.io
   - Multiple other Devops and System Admin roles across a variety of company sizes as well as public institutions
   - Passion for Robust Architectures
+  - Overall Background
+    - Professionally: Systadmin -> DevOps (like to use all the fancy tools Developers use to manage Infrastructure)
+    - Volunteer: Custom PHP framework, then over to Yii Framework (yes, CraftCMS seems SUPER cool at that point...)
+    - Both: Several wordpress installations/management over the years
+
+- Take questiosn throughout the presentation: **REPEAT QUESTIONS**
 
 <!--s-->
 
@@ -99,19 +105,6 @@ Note:
 
 <!--s-->
 
-## Transition Strategies
-
-- Depends on where you want to go to.  And the audience that will be maintaining the content on the site.
-- Dump static, load into JAMSTack
-  - Pure HTML
-  - Content itself in Markdown?
-- Git based workflow
-  - Web based Git Workflow: NetlifyCMS
-- Headless CMS
-  - Wordpress as Headless CMSes
-  - Others such as Payload and Craft (see last two month's presentation for a deep conversation)
-
-<!--v-->
 
 ## Content - Where does it live
 
@@ -132,7 +125,44 @@ Note:
 - Headless CMS
   - Content lives in Database, rendered dynamically with API calls from Front-end
   - Allows for more full-features workflows, etc.
+  - Upside:
+    - More complex workflows
+    - Dynamic data generation
+  - Downsides
+    - Dynamic code - so performance, security.
 
+<!--s-->
+
+# Content Metadata
+
+- YAML front matter
+
+Note:
+
+- Front matter - generally freeform, can include semi-required fields such as title, tags, dates, author, etc.
+
+<!--s-->
+## Transition Strategies
+
+- Depends on where you want to go to.  And the audience that will be maintaining the content on the site.
+- Dump static, load into JAMSTack
+  - Pure HTML
+  - Content itself in Markdown?
+- Git based workflow
+  - Web based Git Workflow: NetlifyCMS
+- Headless CMS
+  - Wordpress as Headless CMSes
+  - Others such as Payload and Craft (see last two month's presentation for a deep conversation)
+
+<!--v-->
+
+<!--s-->
+
+# Demo
+
+- Netlify "Quick Demo"
+- Wordpress to Hugo transion. - https://github.com/palaniraja/blog2md
+- Headless Wordpress - https://developer.wordpress.org/rest-api/ and https://wpengine.com/resources/headless-cms-and-wordpress/#Headless_WordPress_CMS
 
 <!--s-->
 
