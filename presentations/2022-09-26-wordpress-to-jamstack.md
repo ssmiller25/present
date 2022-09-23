@@ -24,14 +24,13 @@ GOAL: 30 minutes presentation, with 15-30 minute Q&A
 
 - Introduction of myself
   - Sr. DevOps Engineer at Tuition.io
-  - Multiple other Devops and System Admin roles across a variety of company sizes as well as public institutions
+  - Multiple other Devops and System Admin roles across a variety of private and public institutions
   - Passion for Robust Architectures
   - Overall Background
     - Professionally: Systadmin -> DevOps (like to use all the fancy tools Developers use to manage Infrastructure)
     - Volunteer: Custom PHP framework, then over to Yii Framework (yes, CraftCMS seems SUPER cool at that point...)
     - Both: Several wordpress installations/management over the years
-
-- Take questiosn throughout the presentation: **REPEAT QUESTIONS**
+- Take questions throughout the presentation: **REPEAT QUESTIONS**
 
 <!--s-->
 
