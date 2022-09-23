@@ -41,13 +41,41 @@ Discuss the Jamstack, and moving from Wordpress to a Jamstack site.
 
 Note:
 
-- Notes here
+- Overall Goals: 
+  - Discuss the architecture of a Jamstack site
+  - Discuss motivations of why you may wish to move away from Wordpress
+  - Various methods to do so, or to live with the best of all technologies.
 
+
+<!--s-->
+
+## The Web - Early History
+
+![Web 1.0](./2022-09-26-wordpress-to-jamstack/stack-statichtml.png)
+
+Note:
+
+- In the beginnging - just plain HTML, images, and a browser
+
+<!--v-->
+
+## The Web - Improvements
+
+![Dynamic Site](./2022-09-26-wordpress-to-jamstack/stack-wordpress.png)
+
+Note:
+
+- Static HTML was a pain to maintain - and only the same thing shown to everyone
+- So...let's have the web server dynamically build a site, using a database as a back end.
+- All kinds of interesting things
+  - Centralized templates across the site
+  - User logins - and user based content based on that login!
+  - Easy to maintain content for non-web adminstrators (not needing to give out tools like Dreamweaver...or (shudder to think) Frontpage)
 
 <!--s-->
 ## Wordpress: What's the problem?
 
-Basic Wordpress Architecture Diagram Here
+![Dynamic (Wordpress) Site](./2022-09-26-wordpress-to-jamstack/stack-wordpress.png)
 
 Note:
 
@@ -68,6 +96,7 @@ Note:
 - Common platform with lots of plugings: but
   - Security of platform itself.  Perhaps mention downsides of older platform, less then ideal separation of view, controller, and model code 
   - Plugins are common code exploits.  Link to recent, hihg profile plugin exploits...and plugins have **FULL** access to entire environment including
+    - [Over 280,000](https://thehackernews.com/2022/09/over-280000-wordpress-sites-attacked.html)
 - Performance
   - Without optimization, Database quer(ies) on each page hit.
     - Can optimize with Memcached for database queries, and possible front the entire site with a CDN
@@ -79,15 +108,15 @@ Note:
 
 A modern approach to static websites:
 
+![JamStack](./2022-09-26-wordpress-to-jamstack/stack-jamstack.png)
+
+Note:
+- Wait...static websites!
+
 - **J**avascript
 - **A**PI
 - **M**arkdown
 
-<!--v-->
-
-## Wait...static websites!
-
-Note:
 - By wrapping static sites with modern frameworks, we can mitigate a LOT of the issues we see with standalong wordpress installs
 - Security: Reduce exposure by JUST having the API exposed.  The rest of the site...just a static site!
   - Still have to be cautious of XSS, XSRF - but reduced surface area for verifying content, etc.
@@ -130,6 +159,17 @@ Note:
   - Downsides
     - Dynamic code - so performance, security.
 
+<!--v-->
+
+# Netlify-CMS
+
+Let non-technical users use a Git workflow for your website.
+
+Note:
+
+- Demo: Basic Netlify site leveraging Hugo and Netlify-CMS for content editing
+
+
 <!--s-->
 
 # Content Metadata
@@ -153,7 +193,17 @@ Note:
   - Wordpress as Headless CMSes
   - Others such as Payload and Craft (see last two month's presentation for a deep conversation)
 
+Note:
+
+- Convert to Markdown
+  - WP to Hugo: https://github.com/SchumacherFM/wordpress-to-hugo-exporter
+  - WP to Gatsby https://github.com/tinacms/wp-gatsby-markdown-exporter
+
+- Demo: Moving Wordpress Site over to Hugo 
+
 <!--v-->
+
+
 
 <!--s-->
 
@@ -162,6 +212,16 @@ Note:
 - Netlify "Quick Demo"
 - Wordpress to Hugo transion. - https://github.com/palaniraja/blog2md
 - Headless Wordpress - https://developer.wordpress.org/rest-api/ and https://wpengine.com/resources/headless-cms-and-wordpress/#Headless_WordPress_CMS
+
+<!--s-->
+
+Strategies we Avoided:
+
+- Headless Wordpress
+
+Note:
+
+- Headless Wordpress - technically possible, but still retains a bit of the downsides of traditional wordpress
 
 <!--s-->
 
