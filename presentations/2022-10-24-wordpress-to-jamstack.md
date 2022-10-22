@@ -5,7 +5,7 @@ highlightTheme: "monokai"
 slideNumber: true
 title: "Wordpress to Jamstack"
 description: "WordPress is an incredibly popular platform. Yet there is a high overhead in developing and maintaining WordPress. We will explore leveraging Jamstack technologies to build a more robust web platform."
-last-updated: "September 26, 2022"
+last-updated: "Oct 24, 2022"
 separator: <!--s-->
 verticalSeparator: <!--v-->
 revealOptions:
@@ -45,13 +45,21 @@ Note:
   - Discuss the architecture of a Jamstack site
   - Discuss motivations of why you may wish to move away from Wordpress
   - Various methods to do so, or to live with the best of all technologies.
+- Background on Audience
+  - How many current manage Wordpress Installation?
+  - Use Git/Github/etc for Development?
+  - Manage Cloud Resources? (which cloud, and what)
+  - GRWebDev: What technologies?
+    - Backend: Node, Rails, Python, PHP
+    - Frontend: Pure JS, Angular, React, Vue, others? 
+    - IDEs: VSCode...others? (vim joke perhaps)
 
 
 <!--s-->
 
 ## The Web - Early History
 
-![Web 1.0](./2022-09-26-wordpress-to-jamstack/stack-statichtml.png)
+![Web 1.0](./2022-10-24-wordpress-to-jamstack/stack-statichtml.png)
 
 Note:
 
@@ -61,7 +69,7 @@ Note:
 
 ## The Web - Improvements
 
-![Dynamic Site](./2022-09-26-wordpress-to-jamstack/stack-wordpress.png)
+![Dynamic Site](./2022-10-24-wordpress-to-jamstack/stack-wordpress.png)
 
 Note:
 
@@ -75,7 +83,7 @@ Note:
 <!--s-->
 ## Wordpress: What's the problem?
 
-![Dynamic (Wordpress) Site](./2022-09-26-wordpress-to-jamstack/stack-wordpress.png)
+![Dynamic (Wordpress) Site](./2022-10-24-wordpress-to-jamstack/stack-wordpress.png)
 
 Note:
 
@@ -108,7 +116,7 @@ Note:
 
 A modern approach to static websites:
 
-![JamStack](./2022-09-26-wordpress-to-jamstack/stack-jamstack.png)
+![JamStack](./2022-10-24-wordpress-to-jamstack/stack-jamstack.png)
 
 Note:
 - Wait...static websites!
