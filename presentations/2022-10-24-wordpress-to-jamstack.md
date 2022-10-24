@@ -228,8 +228,7 @@ Note:
 
 <!--s-->
 
-
-## Thanks you!
+## Thank you
 
 - **Contact**
   - <https://present.r15cookie.com>

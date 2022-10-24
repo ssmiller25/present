@@ -247,7 +247,6 @@ Note:
 <!--s-->
 ## Thanks you!
 
-
 - **Contact**
   - <https://present.r15cookie.com>
   - <https://www.r15cookie.com>
