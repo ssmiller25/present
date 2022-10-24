@@ -185,17 +185,14 @@ Note:
 
 
 <!--s-->
+## Transition Strategies
 
-# Content Metadata
-
-- YAML front matter
+- Writer/Editor Audience?
+  - Technical: Pure HTML - Hosted in Git
+  - Semi-Technical or Non-Technical: Markdown/Git Based Workflow
+  - Non-Technical: Headless CMS
 
 Note:
-
-- Front matter - generally freeform, can include semi-required fields such as title, tags, dates, author, etc.
-
-<!--s-->
-## Transition Strategies
 
 - Depends on where you want to go to.  And the audience that will be maintaining the content on the site.
 - Dump static, load into JAMSTack
@@ -203,20 +200,14 @@ Note:
   - Content itself in Markdown?
 - Git based workflow
   - Web based Git Workflow: NetlifyCMS
+- Convert to Markdown
+  - WP to Hugo: https://github.com/SchumacherFM/wordpress-to-hugo-exporter
+  - WP to Gatsby https://github.com/tinacms/wp-gatsby-markdown-exporter
 - Headless CMS
   - Wordpress as Headless CMSes
   - Others such as Payload and Craft (see last two month's presentation for a deep conversation)
 
-Note:
-
-- Convert to Markdown
-  - WP to Hugo: https://github.com/SchumacherFM/wordpress-to-hugo-exporter
-  - WP to Gatsby https://github.com/tinacms/wp-gatsby-markdown-exporter
-
 - Demo: Moving Wordpress Site over to Hugo 
-
-<!--v-->
-
 
 
 <!--s-->
