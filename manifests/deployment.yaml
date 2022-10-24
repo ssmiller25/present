@@ -28,7 +28,7 @@ spec:
         app: present
     spec:
       containers:
-      - image: quay.io/ssmiller25/present:1.4.2
+      - image: quay.io/ssmiller25/present:1.4.3
         imagePullPolicy: Always
         name: present
         ports:
