@@ -215,12 +215,10 @@ Note:
 # Demo
 
 - Netlify "Quick Demo"
-- Wordpress to Hugo transion. - https://github.com/palaniraja/blog2md
-- Headless Wordpress - https://developer.wordpress.org/rest-api/ and https://wpengine.com/resources/headless-cms-and-wordpress/#Headless_WordPress_CMS
 
-<!--s-->
+<!--v-->
 
-Strategies we Avoided:
+## Strategies we Avoided:
 
 - Headless Wordpress
 
