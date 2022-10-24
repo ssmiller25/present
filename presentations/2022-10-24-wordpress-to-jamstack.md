@@ -144,6 +144,15 @@ Note:
 
 ## Content - Where does it live
 
+
+![JamStack](./2022-10-24-wordpress-to-jamstack/stack-jamstack.png)
+
+- Purely in Git
+- Git Based Headless CMS
+- Headless CMS
+
+Note:
+
 - Purely in Git
   - Can use pure development-like review processes
   - Kind of assumes website/HTML generated content
@@ -155,9 +164,6 @@ Note:
   - [Payload CMS](https://payloadcms.com/) - July's GRWebDev Presentation
   - [Craft CMS](https://craftcms.com/) - August's GRWebDev Presentation
   - [Ghost CMS](https://ghost.org/)
-
-Note:
-
 - Headless CMS
   - Content lives in Database, rendered dynamically with API calls from Front-end
   - Allows for more full-features workflows, etc.

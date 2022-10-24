@@ -3,3 +3,4 @@ vscode:
     - vscode.markdown
     - DavidAnson.vscode-markdownlint
     - streetsidesoftware.code-spell-checker
+    - evilz.vscode-reveal
