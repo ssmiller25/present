@@ -228,6 +228,19 @@ Note:
 
 <!--s-->
 
+
+## Thanks you!
+
+- **Contact**
+  - <https://present.r15cookie.com>
+  - <https://www.r15cookie.com>
+  - me@r15cookie.com
+- **Conversion Tools**
+  - WP to Hugo: https://github.com/SchumacherFM/wordpress-to-hugo-exporter
+  - WP to Gatsby https://github.com/tinacms/wp-gatsby-markdown-exporter
+
+<!--s-->
+
 ## Additional Resources
 
 - [The Jamstack Ecosystem vs. WordPress: Why and When to Switch](https://prismic.io/blog/jamstack-vs-wordpress)
