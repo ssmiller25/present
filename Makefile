@@ -1,6 +1,6 @@
 
 git_hash = $(shell git rev-parse --short -q HEAD)
-version := 1.4.1
+version := 1.4.2
 release_date := $(shell date +%Y-%m-%d)
 reveal_version := 5.3.2
 
