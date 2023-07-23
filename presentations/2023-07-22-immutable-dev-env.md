@@ -96,3 +96,12 @@ Remote Development VSCode Extension: https://marketplace.visualstudio.com/items?
 Open environment from "Github Desktop"
 Click `><` In corner to "Run in Container"
 Demo same live environment
+
+<!--s-->
+
+## Thank you
+
+- **Contact**
+  - <https://present.r15cookie.com>
+  - <https://www.r15cookie.com>
+  - me@r15cookie.com
