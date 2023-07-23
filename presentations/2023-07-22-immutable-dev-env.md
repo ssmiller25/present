@@ -49,3 +49,22 @@ Note:
   - Ever had a local OS and IDE update hose your dev environment?
   - Onboarding new developers?  Readme up to date
   - The possibility of TDD **on your Dev Environment** - or potentially integrate your dev environment container into your CI so breaking changes are noticed in your normal dev pipeline!
+
+<!--s-->
+
+## Tools
+
+DevContainers (<https://containers.dev>): A /somewhat/ open standard for defining Dockerized development environments
+
+Codespaces: An online development environment that leverages DevContainers
+
+<!--s-->
+
+## Getting Started
+
+- Using a Codespace template <https://github.com/codespaces/templates>
+
+Note:
+
+Demo actual creation in Github
+Describe codespaces briefly
