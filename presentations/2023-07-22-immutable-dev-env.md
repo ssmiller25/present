@@ -66,5 +66,33 @@ Codespaces: An online development environment that leverages DevContainers
 
 Note:
 
-Demo actual creation in Github
-Describe codespaces briefly
+- Mention can also start in VScode - but I
+- Start with Codespaces - NextJS template perhaps - <https://github.com/codespaces/templates>
+  - Click on Next JS
+  - WOW, VSCode in the Browser!
+  - Change header...sweet
+  - Now need to actually save to a repo...not the best experience...
+    - Source Control
+    - Click "Publish Branch"
+    - Click public or private
+    - When asked, agree to create a "fork"
+- Open up my existing codespaces: <https://github.com/ssmiller25/grwebdev-nextjs-codespaces>
+- Review .devcontainer/devcontainer.json
+  - Ping out base image container
+  - postAttachCommand (commands to run every time tyou attach)
+  - postCreateCommand (every time you create an environment)
+  - postStartCommand (every time you start an environment)
+- But what if we didn't want to run in the "cloud"
+
+<!--s-->
+
+## DevContainers: Locally
+
+**VSCode** and **Remote Development** extension
+
+Note:
+
+Remote Development VSCode Extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+Open environment from "Github Desktop"
+Click `><` In corner to "Run in Container"
+Demo same live environment
