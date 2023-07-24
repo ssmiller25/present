@@ -5,7 +5,7 @@ highlightTheme: "monokai"
 slideNumber: true
 title: "Immutable Development Environment"
 description: "A local development environment is key to productivity. What happens when it breaks? We will explore the use of dev containers and remote development environments to help address some of those needs."
-last-updated: "July 22, 2023"
+last-updated: "July 24, 2023"
 separator: <!--s-->
 verticalSeparator: <!--v-->
 revealOptions:
@@ -96,6 +96,20 @@ Remote Development VSCode Extension: https://marketplace.visualstudio.com/items?
 Open environment from "Github Desktop"
 Click `><` In corner to "Run in Container"
 Demo same live environment
+Mention container difference (maybe historical timeline of devcontainer.json)
+
+<!--s-->
+
+## DevContainer: Multi-Tiered App
+
+Also bundle within PR requests themselves
+
+https://github.com/payloadcms/public-demo/pull/23
+
+Note:
+
+- Can have a fully deployed pre-contained development environment for proposed code changes
+- Demo: PayloadCMS demo environment as a DevContainer/Codespace environment.
 
 <!--s-->
 
