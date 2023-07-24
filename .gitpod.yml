@@ -7,7 +7,6 @@ vscode:
   extensions:
     - ms-azuretools.vscode-docker
     - ms-kubernetes-tools.vscode-kubernetes-tools
-    - vscode.markdown
     - DavidAnson.vscode-markdownlint
     - streetsidesoftware.code-spell-checker
     - evilz.vscode-reveal
