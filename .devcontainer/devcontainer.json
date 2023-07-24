@@ -38,7 +38,8 @@
 				"yzhang.markdown-all-in-one",
 				"evilz.vscode-reveal",
 				"streetsidesoftware.code-spell-checker",
-				"4ops.terraform"
+				"4ops.terraform",
+				"ms-vscode.makefile-tools"
 			]
 			}
 	}

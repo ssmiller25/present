@@ -1,6 +1,12 @@
+image: quay.io/ssmiller25/gitpod-k8s:latest
+tasks:
+  - name: Login to Cloud Resources
+    command: |
+      bash $HOME/scripts/00-cloudinit.sh
 vscode:
   extensions:
-    - vscode.markdown
+    - ms-azuretools.vscode-docker
+    - ms-kubernetes-tools.vscode-kubernetes-tools
     - DavidAnson.vscode-markdownlint
     - streetsidesoftware.code-spell-checker
     - evilz.vscode-reveal

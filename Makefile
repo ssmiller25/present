@@ -2,7 +2,7 @@
 git_hash = $(shell git rev-parse --short -q HEAD)
 version := 1.4.3
 release_date := $(shell date +%Y-%m-%d)
-reveal_version := 5.3.2
+reveal_version := 5.5.1
 
 
 DOCKER_REPO=quay.io/ssmiller25
