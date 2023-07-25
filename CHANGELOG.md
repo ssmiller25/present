@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2023-07-24
+
+- Latest presentations for GRWebDev
+
 ## [1.3.1] - 2021-03-03
 
 - Civo Fast Feedback with screenshots
