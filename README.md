@@ -37,6 +37,20 @@ Presentations created by [Steve Miller](https://www.r15cookie.com/about/)  All d
   make livedev
   ```
 
+## Printing
+
+To print to PDF:
+
+1.  Add the following to the markdown header of a presentation:
+
+```yaml
+revealOptions:
+    showNotes: 'separate-page'
+```
+
+2. Open the presentation, and append `?print-pdf` to end of URL (remove any `#/` present)
+3. Use the local systems print dialog to print a PDF
+
 ## Deployment
 
 1. Setup k8s Cluster.  With Civo
