@@ -27,7 +27,7 @@ jobs:
         run: reveal-md presentations/ --static _site --listing-template template/index.html
 
       - name: Copy CSS assets
-        run: cp -r css/ _site/css/
+        run: cp css/*.css _site/css/
 
       - name: Copy presentation assets (images, etc.)
         run: rsync -av --exclude='*.md' presentations/ _site/
