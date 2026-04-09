@@ -53,36 +53,13 @@ revealOptions:
 
 ## Deployment
 
-1. Setup k8s Cluster.  With Civo
+The site is deployed automatically to [GitHub Pages](https://pages.github.com/) via the [pages workflow](.github/workflows/pages.yml) on every push to `main`.
 
-```sh
-civo k3s create <clustername> --size g3.k3s.small --nodes 1 --applications cert-manager
-```
+To enable for the first time:
 
-2. Set domainname manually to ingress (TODO: exteranl-dns setup...)
-3. Install [cert-manager](https://github.com/jetstack/cert-manager)
-4. Setup an Issuer.  Below example assumes leverage a Trafik for an ingress
+1. Go to **Settings → Pages** in the GitHub repo.
+2. Set **Source** to **GitHub Actions**.
+3. Set the custom domain to `present.r15cookie.com` and save.
+4. Add a DNS `CNAME` record pointing `present.r15cookie.com` → `ssmiller25.github.io`.
 
-    ```yaml
-    apiVersion: cert-manager.io/v1alpha2
-    kind: ClusterIssuer
-    metadata:
-      name: letsencrypt-prod
-      namespace: cert-manager
-    spec:
-      acme:
-        email: me@r15cookie.com
-        server: https://acme-v02.api.letsencrypt.org/directory
-        privateKeySecretRef:
-          name: blast-public-secret-issuer-account-key
-        solvers:
-        - http01:
-            ingress:
-              class: traefik
-      ```
-
-5. Apply rest of repo
-
-    ```sh
-    kubectl apply -k .
-    ```
+Subsequent pushes to `main` will rebuild and redeploy automatically.
